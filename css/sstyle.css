@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  background-color: #221f1f;
+  height: 100vh;
+  font-family: "Muli", sans-serifl;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 124px;
+  height: 70px;
+  margin-left: 15px;
+}
+header .profile {
+  margin-right: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+header .profile__nav {
+  display: flex;
+  align-items: center;
+}
+header .profile__nav img {
+  height: 30px;
+  width: 30px;
+}
+header .profile__nav p {
+  margin-left: 10px;
+  color: #f5f5f1;
+}
+header .profile ul {
+  display: none;
+  position: absolute;
+  right: 0px;
+  list-style: none;
+  margin: 0;
+  bottom: -65px;
+}
+header .profile ul li {
+  text-align: end;
+  margin-bottom: 5px;
+}
+header .profile ul li a {
+  color: #f5f5f1;
+  text-decoration: none;
+}
+header .profile ul li a:hover {
+  text-decoration: underline;
+}
+header .profile:hover ul, header ul:hover {
+  display: block;
+}
+
+.main {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+.main .title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.main .title h1 {
+  color: #f5f5f1;
+  display: block;
+  width: 100%;
+  font-size: 34px;
+}
+.main input {
+  height: 50px;
+  border-radius: 30px;
+  padding: 0px 20px;
+  width: 40%;
+  color: #f5f5f1;
+  border: 2px solid #f5f5f1;
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+.carrousel {
+  margin-top: 80px;
+  padding-left: 50px;
+}
+.carrousel h2 {
+  color: #f5f5f1;
+  letter-spacing: 1px;
+  margin-top: 80px;
+}
+.carrousel__container {
+  width: 100%;
+  height: 250px;
+  white-space: nowrap;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.carrousel__container .item {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 250px;
+  border-radius: 20px;
+  margin-right: 40px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 450ms all;
+  transform-origin: center left;
+  box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.75);
+}
+.carrousel__container .item img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 1;
+}
+.carrousel__container .item .details {
+  position: absolute;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0));
+  font-size: 10px;
+  opacity: 0;
+  transition: 450ms opacity;
+  padding: 10px;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.carrousel__container .item .details .button {
+  width: 30px;
+  height: 30px;
+}
+.carrousel__container .item .details .button img {
+  width: 100%;
+  height: 100%;
+}
+.carrousel__container .item .details .title {
+  font-size: 19px;
+  font-weight: bold;
+  color: #f5f5f1;
+  margin-bottom: 0;
+}
+.carrousel__container .item .details .subtitle {
+  font-size: 14px;
+  color: #f5f5f1;
+  margin-bottom: 0;
+}
+.carrousel__container .item:hover ~ .item {
+  transform: translate3d(20px, 0, 0);
+}
+.carrousel__container .item:hover .details {
+  opacity: 1;
+}
+.carrousel__container:hover .item {
+  opacity: 0.05;
+}
+.carrousel__container:hover .item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+footer {
+  margin-top: 80px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  font-family: "Muli", sans-serifl;
+}
+footer a {
+  color: #f5f5f1;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 30px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .main .title h1 {
+    font-size: 24px;
+  }
+
+  .main input {
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  .carrousel__container {
+    overflow: hidden;
+  }
+}
