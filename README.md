@@ -2,9 +2,9 @@
 
 <img src="/images/ss1.png">
 <img src="/images/ss2.png">
-<img src="/images/ss3.jpeg">
-<img src="/images/ss4.jpeg">
-<img src="/images/ss5.jpeg">
+<img src="/images/ss3.png">
+<img src="/images/ss4.png">
+<img src="/images/ss5.png">
 
 ## Lenguajes
 
